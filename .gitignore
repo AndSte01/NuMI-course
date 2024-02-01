@@ -1,0 +1,11 @@
+# VSCode
+.vscode
+
+# Tests (copyrighted by chair)
+test*
+
+# Written down solutions  (copyrighted by chair)
+Blatt*
+
+# MatLab autosave files
+*.asv
