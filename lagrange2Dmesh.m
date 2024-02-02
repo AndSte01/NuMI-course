@@ -25,6 +25,10 @@ end
 %   f:  interpolated values at the given xi and eta
 %   df: derivative of the interpolated function at given xi and eta
 %
+% Exercise 3
+%
+% requires lagrange2D (linquadref, linquadderivref)
+%
 % © 2024, Andreas Steger
 
 % check if sizes are correct

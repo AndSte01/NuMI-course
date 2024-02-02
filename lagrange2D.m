@@ -26,18 +26,11 @@ end
 %   f:  interpolated function values
 %   df: derivatives at the given point [dxi, deta]
 %
-% requires linquadref linquadderivref
+% Exercise 3
+%
+% requires linquadref, linquadderivref
 %
 % © 2024, Andreas Steger
-
-%% bring input to form
-% make sure y is always a column vector
-% if isrow(y)
-%     y = y';
-% end
-
-%size(xi)
-%size(eta)
 
 %% evaluate f
 f = linquadref(xi, eta)' * y;
