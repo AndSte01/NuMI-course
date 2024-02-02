@@ -41,7 +41,7 @@ triangles = zeros([n_elements*2 3]);
 % Vierecke, in der zweiten Hälfte der Matrix analog die _zweiten_) dadurch
 % erleichtert sich aber die Berechnung der Zeilenindizes, sie kondensiert
 % sich auf die Berechnung eines einfachen Offsets für die zweiten Dreiecke
-for i=1:height(elements)
+for i=1:n_elements
     triangles(i,:) = [elements(i,1), elements(i,2), elements(i,4)];
     triangles(n_elements + i,:) = [elements(i,2), elements(i,3), elements(i,4)];
 end
