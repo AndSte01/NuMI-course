@@ -20,7 +20,7 @@ end
 % get weights and etas in 1D
 [x, w] = gxw(n);
 
-% combine the wights and etas to different points
+% combine the weights and etas to different points
 gaussx = table2array(combinations(x, x));
 gaussw = prod(table2array(combinations(w, w)), 2);
 
