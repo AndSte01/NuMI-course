@@ -34,7 +34,6 @@ for i = 1:(n+1)
 end
 end
 
-
 function val = lagrange_base_derivative(x, n, i, x_nodes)
 arguments
     x (1,1) double
