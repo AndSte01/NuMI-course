@@ -9,7 +9,7 @@ end
 %element.
 % Solving a certain stationary thermal conduction problem
 %
-%   -∇⋅(λ∇T)=0
+%   -∇⋅(λ∇T) = 0
 %
 % Input:
 %   elenode:       List of points creating the element
