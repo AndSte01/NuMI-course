@@ -1,8 +1,8 @@
 function x = getxPos(nodes, xi, eta)
 arguments
     nodes (4,2) double
-    xi (1,1) double
-    eta (1,1) double
+    xi (:,1) double
+    eta (:,1) double
 end
 %GETXPOS Maps xi and eta to the 2D-Space provided by given nodes
 % This function uses a numerical solution
