@@ -18,6 +18,8 @@ end
 %element.
 % Solving a certain instationary thermal conduction problem
 %
+%   ρc(∂T/∂t) - ∇⋅(λ∇T) = q̇
+%
 % Input:
 %   elenode:   List of points creating the element
 %                  [x, y; ...; x, y]
@@ -62,7 +64,7 @@ B = zeros([n_N n_N]); % in stationary state we don't set the element vector to z
 % iterate over the gauss points
 for k = 1:n_k
     % [gpx(k,1), gpx(k,2)]
-    % evaluate the Lagrange polynoms (and theire derivatives) at the given
+    % evaluate the Lagrange polynoms (and their derivatives) at the given
     % location
     N = linquadref(gpx(k,1), gpx(k,2));
     dN = linquadderivref(gpx(k,1), gpx(k,2));
