@@ -27,7 +27,7 @@ if(height(A) ~= width(A))
     error("A must be a square matrix (is "+size+"×"+width(A)+")")
 end
 if(height(b)~=size)
-    error("b must be vector of same height as A (is "+height(B)+" and "+size+")")
+    error("b must be vector of same height as A (is "+height(B)+", expected: "+size+")")
 end
 
 % iterate over columns

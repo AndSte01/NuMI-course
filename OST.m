@@ -50,7 +50,7 @@ if (width(B) ~= 2*height(B))
         "interpreted as "+height(B)+"×"+width(B)*.5+")")
 end
 if (n ~= height(B))
-    error("M and B must be of same height ("+n+" and "+height(B)+")")
+    error("M and B must be of same height (is "+height(B)+", expected: "+n+")")
 end
 if (height(C) ~= n)
     error("C must be composed of row vectors with the same height as M")
