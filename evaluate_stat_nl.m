@@ -12,7 +12,7 @@ end
 %element.
 % Solving a certain stationary thermal conduction problem
 %
-%   -∇⋅(λ∇T)=0
+%   -∇⋅(λ∇T) = q̇(T)
 %
 % Input:
 %   elenode:       List of points creating the element
@@ -20,7 +20,7 @@ end
 %   gpx:           Positions ξ_i for the gauß-integration
 %   gpw:           Weights w_i for the gauß-integration
 %
-% Optional:
+% Optional: (optional.x)
 %   lambda:       Thermal conductivity of the material [W/mK]
 %
 % Output:
@@ -50,9 +50,11 @@ for k=1:n_k
     dN = linquadderivref(gpx(k,1), gpx(k,2));
     N = linquadref(gpx(k,1), gpx(k,2));
     [~, detJ, invJ] = getJacobian(elenodes, gpx(k,1), gpx(k,2));
+    % iterate over rows
     for i=1:n_N
         % Calculate the value for usage in q or dq
         temp_sum_j_v1 = N'*elesol;
+        % iterate over columns
         for j=1:n_N
             % N(i,:)*invJ: *invJ is important since we evaluate the
             % Lagrange function on the reference element but we need to
@@ -70,11 +72,6 @@ temp_M1 = optional.lambda*temp_M1;
 
 
 %% generate elevec and elemat
-% empty result matrix 
-% elemat = zeros([n_N, n_N]);
-% elevec = zeros([n_N 1]);
-
-% calculate the results
 elevec = temp_M1*elesol - temp_v1;
 elemat = temp_M1 - temp_M2;
 

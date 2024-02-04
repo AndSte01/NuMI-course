@@ -18,7 +18,7 @@ end
 %element.
 % Solving a certain instationary thermal conduction problem
 %
-%   ρc(∂T/∂t) - ∇⋅(λ∇T) = q̇
+%   ρc(∂T/∂t) - ∇⋅(λ∇T) = 0
 %
 % Input:
 %   elenode:   List of points creating the element

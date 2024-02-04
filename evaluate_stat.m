@@ -17,8 +17,8 @@ end
 %   gpx:           Positions ξ_i for the gauß-integration
 %   gpw:           Weights w_i for the gauß-integration
 %
-% Optional:
-%   lambda:       Thermal conductivity of the material [W/mK]
+% Optional: (optional.x)
+%   lambda: Thermal conductivity of the material [W/mK]
 %
 % Output:
 %   elemat: Elementmatrix
