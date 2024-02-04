@@ -45,13 +45,11 @@ x = zeros([size 1]);
 
 % backward substitution
 for r=-size:-1 % why MatLab why? (count down not up)
-    c = A(-r,-r);
-    A(-r,-r) = 0;
-    x(-r) = (b(-r) - A(-r,:)*x)/c;
-    %(A(-r,:)*x)/b(-r);
+    % note: x = zeros -> only important values are not null
+    x(-r) = (b(-r) - A(-r,:)*x)/A(-r,-r);
 end
 
-% for possible implementation for diagonal form
+% for possible implementation of inversion
 % A(3,:) = A(2,:)-A(2,3)/A(3,3)*A(3,:);
 
 end
