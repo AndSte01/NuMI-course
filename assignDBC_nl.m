@@ -30,7 +30,7 @@ for i=1:height(dbc)
     % write row to system matrix
     sysmat(dbc(i,1),:) = row;
 
-    % now assign the value of the boundary condition to the rhs
+    % set row in the rhs to zero
     rhs(dbc(i,1)) = 0;
 end
 end
