@@ -22,7 +22,7 @@ end
 %   C:        Inhomogeneous part
 %                C ∈ m×1    Layout: C(t_n+1)
 %   sol:      solution of the timestep(s) before
-%                sol ∈ m×1  Layout: [ϕ(t_n), ϕ(t_n-1)]
+%                sol ∈ m×2  Layout: [ϕ(t_n), ϕ(t_n-1)]
 %
 % Output:
 %   LHS: Left-hand-side of the resulting equation system

@@ -19,11 +19,11 @@ end
 %   M:        Factor in front of dϕ/dt
 %                M ∈ m×m
 %   B:        Factor in front of ϕ
-%                B ∈ m×m    Layout: [B(t_n), B(t_n-1)]
+%                B ∈ m×2m   Layout: [B(t_n), B(t_n-1)]
 %   C:        Inhomogeneous part
-%                C ∈ m×1    Layout: [C(t_n), C(t_n-1)]
+%                C ∈ m×2    Layout: [C(t_n), C(t_n-1)]
 %   sol:      solution of the timestep(s) before
-%                sol ∈ m×1  Layout: [ϕ(t_n), ϕ(t_n-1)]
+%                sol ∈ m×2  Layout: [ϕ(t_n), ϕ(t_n-1)]
 %
 % Output:
 %   LHS: Left-hand-side of the resulting equation system
