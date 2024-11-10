@@ -44,13 +44,13 @@ invJ = zeros([2*n 2]);
 
 for i = 1:n
     % calculate the Jacobian for the distinct pair of xi, eta
-    J_tmp = nodes' * linquadderivref(xi, eta);
+    J_tmp = nodes' * linquadderivref(xi(i), eta(i));
     % store result in result matrix
-    J((2*n-1):(2*n),:) = J_tmp;
+    J((2*i-1):(2*i),:) = J_tmp;
 
     % using built in function (using exact analytical solution would be to
     % expensive (and would get to much on my nerves!!!)
     detJ(i) = det(J_tmp);
-    invJ((2*n-1):(2*n),:) = inv(J_tmp);
+    invJ((2*i-1):(2*i),:) = inv(J_tmp);
 end
 end
